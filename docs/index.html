@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: 56px 1fr 40px;
+        }
+
+        #login {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
+        .alert-primary {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+           
+     
+    </style>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" >
+    <ul class="navbar-nav mr-auto" >
+        <li class="nav-item">
+            <a class="nav-link" href="#all" id="all" >Все пользователи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#login" id="logout">Выход</a>
+        </li>
+    </ul>
+</nav>
+
+<main role="main">
+    <div class="jumbotron" id="login">
+        <div class="container-sm">
+            <h4>Для входа в систему введите имя пользователя</h4>
+            <form class="form-signin">
+                <div class="form-group">
+                    <input id="inputEmail" class="form-control" placeholder="" required="" autofocus="">
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" id="login-button" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+    <div id="notes">
+        <div class="jumbotron">
+            <div class="container">
+                <h4>Добавить заметку</h4>
+                <form class="form-signin">
+                    <div class="form-group">
+                        <textarea id="note-text" class="form-control" placeholder="" required=""
+                                  autofocus=""></textarea>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" id="add-note" type="submit">Добавить</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" id="notes-container">
+            </div>
+            <div class="alert alert-primary" role="alert">
+                This is a primary alert—check it out!
+            </div>
+            <hr>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <p>© 2020</p>
+</footer>
+<script>
+    /**
+     * Разработать многопользовательское приложение для заметок, состоящее из 2 страниц
+     * 1. Логин
+     * 2. Заметки
+     * Меню с кнопкой "Выход" доступно только на странице заметок
+     * При вводе логина пользователь попадает на страницу с заметками и, пока не выйдет, страница логина ему не доступна
+     * Страница заметок не доступна без логина
+     * При перезагрузке страницы, открытии-закрытии браузера логин должен сохраняться, возможные
+     * страницы для открытия должны вести себя корректно
+     * При успешном добавлении новой заметки textarea должна очищаться
+     *
+     * Дополнительно:
+     * 1. Для залогиненого пользователя доступна страница "Все пользователи", где располагается информация
+     * о всех пользователях системы и их заметках(кнопки назад-вперед браузера работают корректно)
+     * 2. Доблавить возможность удаления заметок
+     */
+
+</script>
+<script src="./js/main.js"></script>
+</body>
+</html>
